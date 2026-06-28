@@ -1,5 +1,11 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router/index';
+import { createPinia } from 'pinia';
+import '@tonconnect-ui/sdk/assets/fonts.css';
+import './assets/tailwind.css';
 
-createApp(App).mount('#app')
+const app = createApp(App);
+app.use(createPinia());
+app.use(router);
+app.mount('#app');
